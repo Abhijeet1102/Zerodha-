@@ -4,6 +4,13 @@ Welcome to the **Zerodha Clone** project! This is a full-stack web application i
 
 ---
 
+## 🌐 Live Demo
+
+The application is deployed and live! You can access it here:
+- **Main Website (Frontend)**: [https://zerodha-frontend-eight-rust.vercel.app/](https://zerodha-frontend-eight-rust.vercel.app/)
+- **Trading Dashboard**: [https://zerodha-eta-opal.vercel.app/](https://zerodha-eta-opal.vercel.app/)
+
+---
 ## 🚀 Features
 
 - **User Authentication**: Secure Signup and Login functionality using Passport.js and `passport-local-mongoose`.
