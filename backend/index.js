@@ -73,8 +73,12 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved!");
 });
 
-app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(uri);
-  console.log("DB started!");
-});
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, () => {
+    console.log("App started!");
+    mongoose.connect(uri);
+    console.log("DB started!");
+  });
+}
+
+module.exports = app;
