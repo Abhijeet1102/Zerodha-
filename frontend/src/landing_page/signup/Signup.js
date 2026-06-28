@@ -24,7 +24,7 @@ function Signup() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3002/signup", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || "http://localhost:3002"}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

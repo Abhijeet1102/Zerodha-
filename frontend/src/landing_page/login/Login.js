@@ -23,7 +23,7 @@ function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3002/login", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || "http://localhost:3002"}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ function Login() {
       if (data.success) {
         setMessage(data.message + " Redirecting to Dashboard...");
         setTimeout(() => {
-          window.location.href = "http://localhost:3001/";
+          window.location.href = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001/";
         }, 2000);
       } else {
         setError(data.message || "Login failed");
